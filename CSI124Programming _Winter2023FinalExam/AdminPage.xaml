@@ -1,0 +1,36 @@
+﻿<Window x:Class="CSI124Programming__Winter2023FinalExam.AdminPage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSI124Programming__Winter2023FinalExam"
+        mc:Ignorable="d"
+        Title="AdminPage" Height="405" Width="704">
+    <Canvas Background="#FFDFC5C5" Margin="0,0,10,0">
+        <ListView x:Name="lvRoster" Height="321" Width="327" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Left="325" Canvas.Top="32">
+            <ListView.View>
+                <GridView>
+
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Name}"/>
+                    <GridViewColumn Header="UserName" DisplayMemberBinding="{Binding UserName}"/>
+                    <GridViewColumn Header="Password" DisplayMemberBinding="{Binding Password}"/>
+                    <GridViewColumn Header="Role" DisplayMemberBinding="{Binding Role}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Canvas Height="321" Width="254" Canvas.Left="10" Canvas.Top="32" Background="#FFAB8585">
+            <TextBox x:Name="txtName" Canvas.Left="58" TextWrapping="Wrap" Canvas.Top="41" Width="173" Height="22"/>
+            <Label x:Name="lbUserName" Content="UserName" Canvas.Left="40" Canvas.Top="73" Width="78"/>
+            <TextBox x:Name="txtUserName" Canvas.Left="58" TextWrapping="Wrap" Canvas.Top="99" Width="173" Height="22"/>
+            <TextBox x:Name="txtPassword" Canvas.Left="58" TextWrapping="Wrap" Canvas.Top="177" Width="173" Height="22"/>
+            <Label x:Name="lbPassword" Content="Password" Canvas.Left="40" Canvas.Top="135" Width="78" RenderTransformOrigin="0.558,0.194"/>
+            <Label x:Name="lbRole" Content="Role" Canvas.Left="40" Canvas.Top="213" Width="78"/>
+            <Label x:Name="lbName" Content=" Name" Canvas.Left="40" Canvas.Top="15" Width="68" RenderTransformOrigin="0.566,1.427"/>
+
+            <Button x:Name="btnAdduser" Content="Add User" Canvas.Left="79" Canvas.Top="285" Height="26" Width="138" Click="Button_Click"/>
+            <ComboBox x:Name="cboxRole" Canvas.Left="92" Canvas.Top="213" Width="139" Height="32"/>
+        </Canvas>
+    </Canvas>
+
+
+</Window>
